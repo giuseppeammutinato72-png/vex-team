@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="VEX — Team Fortnite. Scopri la squadra e seguici sui social.">
+  <title>VEX — Team Fortnite</title>
+  <style>
+    :root { color-scheme: dark; --bg:#080808; --panel:#111; --line:#292929; --white:#f5f5f5; --muted:#a5a5a5; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--white); font-family:Arial,Helvetica,sans-serif; }
+    a { color:inherit; text-decoration:none; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    header { position:sticky; top:0; z-index:5; background:rgba(8,8,8,.88); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    nav { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { font-size:27px; font-weight:1000; letter-spacing:5px; }
+    .navlinks { display:flex; gap:25px; color:#c8c8c8; font-size:13px; text-transform:uppercase; letter-spacing:1px; }
+    .navlinks a:hover { color:white; }
+    .hero { min-height:620px; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
+    .hero:before { content:""; position:absolute; width:650px; height:650px; border:1px solid #252525; transform:rotate(45deg); box-shadow:0 0 0 55px #0c0c0c, 0 0 0 56px #202020, 0 0 0 115px #0b0b0b, 0 0 0 116px #1b1b1b; opacity:.8; }
+    .hero-inner { position:relative; padding:80px 0; }
+    .eyebrow { color:#bdbdbd; font-size:12px; letter-spacing:5px; text-transform:uppercase; }
+    h1 { font-size:clamp(78px,18vw,170px); line-height:.85; letter-spacing:10px; margin:25px 0; font-weight:1000; }
+    .tagline { font-size:clamp(16px,2.5vw,22px); color:#c5c5c5; letter-spacing:2px; text-transform:uppercase; }
+    .actions { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:35px; }
+    .btn { display:inline-flex; justify-content:center; align-items:center; padding:15px 22px; border:1px solid #eee; font-size:12px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; transition:.2s; }
+    .btn.primary { background:#f5f5f5; color:#080808; }
+    .btn:hover { transform:translateY(-3px); background:#d7d7d7; color:#080808; }
+    section { padding:95px 0; }
+    .section-label { color:#929292; font-size:11px; letter-spacing:4px; text-transform:uppercase; }
+    h2 { font-size:clamp(34px,6vw,58px); margin:14px 0 18px; letter-spacing:-2px; }
+    .intro { max-width:650px; color:var(--muted); line-height:1.8; }
+    .members { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:38px; }
+    .member { min-height:210px; padding:25px; background:linear-gradient(145deg,#171717,#0d0d0d); border:1px solid var(--line); display:flex; flex-direction:column; justify-content:space-between; }
+    .number { font-size:12px; color:#777; letter-spacing:2px; }
+    .member strong { font-size:25px; letter-spacing:2px; }
+    .member span:last-child { color:#888; font-size:11px; letter-spacing:2px; text-transform:uppercase; }
+    .socials { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:35px; }
+    .social { border:1px solid var(--line); padding:25px; min-height:175px; display:flex; flex-direction:column; justify-content:space-between; transition:.2s; }
+    .social:hover { border-color:#eee; background:#111; transform:translateY(-4px); }
+    .social b { font-size:22px; }
+    .social small { color:#999; letter-spacing:1px; }
+    .social .arrow { font-size:25px; text-align:right; }
+    .join { background:#f1f1f1; color:#090909; text-align:center; }
+    .join .section-label,.join .intro { color:#555; margin-left:auto; margin-right:auto; }
+    .join h2 { max-width:700px; margin-left:auto; margin-right:auto; }
+    .join .btn { background:#090909; color:white; border-color:#090909; }
+    footer { border-top:1px solid var(--line); padding:27px 0; color:#888; font-size:12px; }
+    footer .wrap { display:flex; justify-content:space-between; gap:15px; flex-wrap:wrap; }
+    @media(max-width:700px) {
+      .navlinks { gap:12px; font-size:10px; }
+      .brand { font-size:22px; }
+      .hero { min-height:530px; }
+      .members,.socials { grid-template-columns:1fr; }
+      section { padding:70px 0; }
+    }
+    @media(max-width:420px) { .navlinks { gap:8px; letter-spacing:0; } .navlinks a { font-size:9px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#inizio" aria-label="VEX, inizio">VEX</a>
+      <div class="navlinks">
+        <a href="#squadra">La squadra</a>
+        <a href="#social">Social</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inizio">
+      <div class="hero-inner wrap">
+        <div class="eyebrow">Team Fortnite · Italia</div>
+        <h1>VEX</h1>
+        <div class="tagline">Tre giocatori. Un solo obiettivo.</div>
+        <div class="actions">
+          <a class="btn primary" href="#squadra">Scopri il team</a>
+          <a class="btn" href="https://discord.gg/z7efeqAhx" target="_blank" rel="noopener noreferrer">Entra nel Discord ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="squadra">
+      <div class="wrap">
+        <div class="section-label">01 / Chi siamo</div>
+        <h2>La squadra VEX.</h2>
+        <p class="intro">Siamo VEX, un team di Fortnite con due capi e un admin. Qui trovi i responsabili della squadra e i nostri canali ufficiali: seguici, guarda i contenuti e resta aggiornato sulle nostre attività.</p>
+        <div class="members">
+          <article class="member"><span class="number">CAPO 01 · LEADER</span><strong>Gentile_Oro551</strong><span>Capo VEX</span></article>
+          <article class="member"><span class="number">CAPO 02 · LEADER</span><strong>VEX_G1useツ</strong><span>Capo VEX</span></article>
+          <article class="member"><span class="number">ADMIN · STAFF</span><strong>VEX_Faiz7zツ</strong><span>Amministratore VEX</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="social" style="background:#0d0d0d;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+      <div class="wrap">
+        <div class="section-label">02 / Seguici</div>
+        <h2>VEX sui social.</h2>
+        <p class="intro">Trovi i nostri contenuti e la community nei canali ufficiali qui sotto.</p>
+        <div class="socials">
+          <a class="social" href="https://www.tiktok.com/@teamvex34" target="_blank" rel="noopener noreferrer"><small>VIDEO E CLIP</small><b>TikTok</b><span class="arrow">↗</span></a>
+          <a class="social" href="https://discord.gg/z7efeqAhx" target="_blank" rel="noopener noreferrer"><small>LA COMMUNITY</small><b>Discord</b><span class="arrow">↗</span></a>
+          <a class="social" href="https://youtube.com/@teamvex5?si=DVPwJTfl7vTTLyte" target="_blank" rel="noopener noreferrer"><small>VIDEO E CONTENUTI</small><b>YouTube</b><span class="arrow">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="join" id="contatti">
+      <div class="wrap">
+        <div class="section-label">03 / Entra nella community</div>
+        <h2>Ci vediamo in partita.</h2>
+        <p class="intro">Vuoi seguire il team VEX? Passa dai nostri canali e unisciti alla community su Discord.</p>
+        <a class="btn" href="https://discord.gg/z7efeqAhx" target="_blank" rel="noopener noreferrer">Apri Discord ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><span>© 2026 VEX TEAM</span><span>Sito della community · Fortnite</span></div>
+  </footer>
+</body>
+</html>
